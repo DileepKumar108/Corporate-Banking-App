@@ -12,30 +12,42 @@ const Login = () => {
   const [form, setForm] = useState({ username: '', password: '' });
   const [mode, setMode] = useState('customer');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (form.username.trim() && form.password.trim()) {
-      const isEmployee = mode === 'employee' || form.username.toLowerCase().includes('employee') || form.username.toLowerCase().includes('bank');
-      const role = isEmployee ? 'Bank Employee' : 'Premium Client';
-      const name = isEmployee ? 'Riya Menon' : 'Aarav Rao';
+    if (!form.username.trim() || !form.password.trim()) {
+      dispatch(loginFailure('Please enter your credentials to continue.'));
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: form.username, password: form.password })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Authentication failed');
+      }
 
       try { window.dispatchEvent(new Event('intro:stop')); } catch (e) { /* ignore */ }
 
       dispatch(loginSuccess({
-        token: 'demo-token',
+        token: data.token,
         user: {
-          name,
-          role,
-          lastLogin: 'Today, 08:42 AM',
+          name: form.username,
+          role: data.role === 'employee' ? 'Bank Employee' : 'Premium Client',
+          lastLogin: new Date().toLocaleString(),
         },
       }));
 
-      navigate(isEmployee ? '/employee' : '/dashboard');
-      return;
+      navigate(data.role === 'employee' ? '/employee' : '/dashboard');
+    } catch (err) {
+      dispatch(loginFailure(err.message));
     }
-
-    dispatch(loginFailure('Please enter your credentials to continue.'));
   };
 
   return (
