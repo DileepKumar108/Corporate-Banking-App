@@ -73,7 +73,11 @@ Just like the famous .NET roadmaps, knowing *what* to learn is only half the bat
     *   [Express.js Official Guide](https://expressjs.com/)
 
 ### ☕ Java / Spring Boot (Enterprise Backend Alternative)
-If you want to build backends for massive global banks, Java is the industry standard.
+If you want to build backends for massive global banks, Java is the industry standard. Below is the visual roadmap for mastering the Java ecosystem:
+
+![Java Developer Roadmap](./java-roadmap.png)
+*Download [PDF version](./java-roadmap.pdf).*
+
 *   **YouTube Channels:**
     *   [Amigoscode](https://www.youtube.com/c/amigoscode) - The absolute best crash courses on Java, Spring Boot, and Microservices.
     *   [Dan Vega](https://www.youtube.com/c/DanVega) - Excellent tutorials on modern Spring Boot features.
