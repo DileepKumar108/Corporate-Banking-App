@@ -72,36 +72,11 @@ Just like the famous .NET roadmaps, knowing *what* to learn is only half the bat
 *   **Documentation:**
     *   [Express.js Official Guide](https://expressjs.com/)
 
-### ☕ Java / Spring Boot (Enterprise Backend Alternative)
-If you want to build backends for massive global banks, Java is the industry standard. Below is the **Interactive Visual Roadmap** for mastering the Java ecosystem. 
+### ☕  Java / Spring Boot (Enterprise Backend Alternative)
+If you want to build backends for massive global banks, Java is the industry standard. 
 
-*(Click on any yellow box to read our exhaustive, point-by-point encyclopedia explanation of that topic!)*
-
-```mermaid
-graph TD
-    classDef clickable fill:#f9f06b,stroke:#333,stroke-width:2px,color:#000,cursor:pointer;
-
-    Start[The Java Developer Journey] --> Core[1. Java Fundamentals]
-    class Core clickable
-    click Core "./java-roadmap/01-Fundamentals.md" "Learn about Variables, OOP, and Collections"
-
-    Core --> Build[2. Build Tools]
-    class Build clickable
-    click Build "./java-roadmap/02-Build-Tools.md" "Learn about Maven and Gradle"
-
-    Build --> Web[3. Web Frameworks]
-    class Web clickable
-    click Web "./java-roadmap/03-Frameworks.md" "Learn about Spring Boot and Dependency Injection"
-
-    Web --> DB[4. Databases & ORMs]
-    class DB clickable
-    click DB "./java-roadmap/04-Databases.md" "Learn about JDBC and Hibernate"
-
-    DB --> Test[5. Enterprise Testing]
-    class Test clickable
-    click Test "./java-roadmap/05-Testing.md" "Learn about JUnit and Mockito"
-```
-*Prefer a static image? Download the official roadmap [PNG version](./java-roadmap.png) or [PDF version](./java-roadmap.pdf).*
+We have built a **Massive Granular Interactive Roadmap** exclusively for Java.
+👉 **[Click here to view the Interactive Java FullStack Roadmap!](./10-Java-Roadmap.md)**
 
 *   **YouTube Channels:**
     *   [Amigoscode](https://www.youtube.com/c/amigoscode) - The absolute best crash courses on Java, Spring Boot, and Microservices.
