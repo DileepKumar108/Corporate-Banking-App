@@ -30,13 +30,21 @@ This is the secure vault where the business logic lives.
 *   **Middleware:** The "bouncers". Writing functions to intercept requests (like our `authenticateToken` function).
 *   **API Design:** RESTful principles (GET, POST, PUT, DELETE), JSON formatting, and HTTP Status Codes (`200 OK`, `400 Bad Request`, `404 Not Found`).
 
-## Level 4: The Database Layer 🗄️
+## Level 4: General Software Engineering Skills 🧠
+Beyond just writing code, Senior Engineers know how to write *good* code and work in teams. Just like the .NET Roadmap, you must master these concepts regardless of the language you use:
+*   **SOLID Principles:** Five rules for writing code that is easy to maintain and scale.
+*   **Design Patterns:** Reusable solutions to common problems (e.g., Singleton, Observer, Factory patterns).
+*   **Clean Code:** Writing code that humans can read easily. Naming variables properly, keeping functions small, and avoiding "magic numbers".
+*   **Advanced Git (Teamwork):** Pull Requests, resolving merge conflicts, rebasing, and branching strategies (GitFlow).
+*   **Agile & Scrum:** How software teams actually work in the real world (Sprints, Standups, Jira).
+
+## Level 5: The Database Layer 🗄️
 In our tutorial, we used a local `db.json` file. In the real world, you need a true database.
 *   **Relational (SQL):** PostgreSQL is the industry gold standard. Learn SQL queries (`SELECT`, `JOIN`, `GROUP BY`).
 *   **Non-Relational (NoSQL):** MongoDB is the easiest to learn with Node.js because it stores data just like JavaScript Objects.
 *   **ORMs / ODMs:** Tools that let you talk to the database using JavaScript instead of raw database code. Learn Prisma (highly recommended) or Mongoose.
 
-## Level 5: The "Senior" Layer (Production Ready) 🛡️
+## Level 6: The "Senior" Layer (Production Ready) 🛡️
 When you know how to build an app, the next step is making it unbreakable.
 *   **TypeScript:** JavaScript with strict rules. It catches bugs before you even run the code. (Most enterprise companies require this).
 *   **Security:** JWT (JSON Web Tokens), CORS, Hashing passwords (bcrypt), preventing SQL Injection, and Rate Limiting.
