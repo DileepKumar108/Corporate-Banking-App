@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "client",
+      "password": "$2b$10$pcR2Urm3cVgf0Czt8ILfnOwdhTSWznzWLMSGgkGjo3osvuoXXuCSW",
+      "role": "client"
+    },
+    {
+      "id": 2,
+      "username": "employee",
+      "password": "$2b$10$QeNWySno7MlC7wGLnL/XkOxVkaBP.KvWcK4hLV9ZuiwLCaKjCC6zS",
+      "role": "employee"
+    }
+  ],
+  "applications": [],
+  "transactions": []
+}
