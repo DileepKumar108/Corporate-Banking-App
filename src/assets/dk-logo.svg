@@ -1,29 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="Dileepkumar Bank logo">
-  <title>Dileepkumar Bank</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="140" viewBox="0 0 560 140" role="img" aria-label="DileepKumar Bank logo">
+  <title>DileepKumar Bank</title>
   <defs>
-    <linearGradient id="g1" x1="0" x2="1">
-      <stop offset="0%" stop-color="#0b63b8" />
-      <stop offset="60%" stop-color="#1191e0" />
-      <stop offset="100%" stop-color="#2fc1ff" />
+    <!-- Metallic gradient for the shield face -->
+    <linearGradient id="chrome-face" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#dcdcdc" />
+      <stop offset="50%" stop-color="#aeaeae" />
+      <stop offset="75%" stop-color="#e1e1e1" />
+      <stop offset="100%" stop-color="#bcbcbc" />
     </linearGradient>
-    <filter id="drop" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#031824" flood-opacity="0.45"/>
+
+    <!-- Metallic gradient for the shield border / bevel -->
+    <linearGradient id="chrome-border" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8e8e8" />
+      <stop offset="20%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#a0a0a0" />
+      <stop offset="60%" stop-color="#f0f0f0" />
+      <stop offset="80%" stop-color="#808080" />
+      <stop offset="100%" stop-color="#d0d0d0" />
+    </linearGradient>
+
+    <!-- Metallic gradient for the text -->
+    <linearGradient id="chrome-text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#f2f2f2" />
+      <stop offset="55%" stop-color="#d0d0d0" />
+      <stop offset="80%" stop-color="#e8e8e8" />
+      <stop offset="100%" stop-color="#b0b0b0" />
+    </linearGradient>
+
+    <!-- Soft outer shadow for the logo mark -->
+    <filter id="glow-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Inner shadow for embossed effect -->
+    <filter id="emboss">
+      <feOffset dx="1" dy="1"/>
+      <feGaussianBlur stdDeviation="1.2" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="black" flood-opacity="0.7" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
     </filter>
   </defs>
 
-  <rect width="520" height="140" fill="none" />
+  <!-- Outer Bevel Shield Path -->
+  <g transform="translate(10, 8)" filter="url(#glow-shadow)">
+    <!-- Outer boundary of the shield -->
+    <path d="M 60 4 C 88 4, 114 18, 114 18 C 114 18, 114 74, 114 78 C 114 104, 88 122, 60 130 C 32 122, 6 104, 6 78 C 6 74, 6 18, 6 18 C 6 18, 32 4, 60 4 Z" 
+          fill="url(#chrome-border)" />
+    
+    <!-- Inner face of the shield -->
+    <path d="M 60 10 C 84 10, 106 22, 106 22 C 106 22, 106 72, 106 76 C 106 98, 84 114, 60 122 C 36 114, 14 98, 14 76 C 14 72, 14 22, 14 22 C 14 22, 36 10, 60 10 Z" 
+          fill="url(#chrome-face)" stroke="#707070" stroke-width="1.5" />
 
-  <!-- Shield mark -->
-  <g transform="translate(16,8)" filter="url(#drop)">
-    <path d="M74 6 L140 28 L162 90 L120 132 L28 132 L2 70 Z" fill="url(#g1)" stroke="#063b62" stroke-width="3" />
-    <circle cx="74" cy="60" r="28" fill="rgba(255,255,255,0.06)" />
-    <text x="60" y="84" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="46" fill="#fff">DK</text>
+    <!-- Center divider for the metallic reflection split -->
+    <path d="M 60 10 C 60 10, 60 122, 60 122 C 36 114, 14 98, 14 76 C 14 72, 14 22, 14 22 Z" 
+          fill="rgba(255,255,255,0.12)" pointer-events="none" />
+    
+    <!-- Bold 'DK' branding inside shield -->
+    <text x="60" y="80" 
+          font-family="'Inter', 'Outfit', 'Montserrat', sans-serif" 
+          font-weight="900" 
+          font-size="44" 
+          text-anchor="middle" 
+          fill="url(#chrome-text)" 
+          stroke="#404040" 
+          stroke-width="1.5"
+          filter="url(#emboss)">DK</text>
   </g>
 
-  <!-- Wordmark -->
-  <g transform="translate(190,36)">
-    <text x="0" y="32" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="36" fill="#0b63b8">Dileepkumar</text>
-    <text x="0" y="62" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="13" fill="#5a7f9f" letter-spacing="6">BANK</text>
+  <!-- DileepKumar BANK Wordmark -->
+  <g transform="translate(148, 36)" filter="url(#glow-shadow)">
+    <!-- DileepKumar -->
+    <text x="0" y="32" 
+          font-family="'Inter', 'Outfit', 'Montserrat', sans-serif" 
+          font-weight="700" 
+          font-size="44" 
+          fill="url(#chrome-text)" 
+          stroke="#333" 
+          stroke-width="1"
+          letter-spacing="-0.5">DileepKumar</text>
+    
+    <!-- BANK -->
+    <text x="4" y="66" 
+          font-family="'Inter', 'Outfit', 'Montserrat', sans-serif" 
+          font-weight="600" 
+          font-size="18" 
+          fill="url(#chrome-text)" 
+          opacity="0.9"
+          letter-spacing="12">BANK</text>
   </g>
-
 </svg>

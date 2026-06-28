@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loginFailure, loginSuccess } from '../store/authSlice';
+import logoImg from '../../../assets/logo.jpg';
+import './Login.css'; // Let's create a specific CSS for this complex layout
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -18,8 +20,7 @@ const Login = () => {
       const role = isEmployee ? 'Bank Employee' : 'Premium Client';
       const name = isEmployee ? 'Riya Menon' : 'Aarav Rao';
 
-      // signal the intro video to stop (if playing)
-      try { window.dispatchEvent(new Event('intro:stop')); } catch (e) {}
+      try { window.dispatchEvent(new Event('intro:stop')); } catch (e) { /* ignore */ }
 
       dispatch(loginSuccess({
         token: 'demo-token',
@@ -38,58 +39,102 @@ const Login = () => {
   };
 
   return (
-    <div className="app-shell">
-      <div className="login-card">
-        <div className="login-hero">
-          <div>
-            <p className="muted">Dileepkumar Bank</p>
-            <h1>Banking designed for modern life.</h1>
-            <p>Monitor your wealth, move money instantly, and stay in control with an intelligent digital experience.</p>
-            <div className="hero-highlights">
-              <span className="hero-pill">24/7 digital support</span>
-              <span className="hero-pill">Real-time insights</span>
-              <span className="hero-pill">Secure transfers</span>
+    <div className="login-container">
+      <div className="login-left-panel">
+        <div className="brand-header">
+          <img src={logoImg} alt="Dileepkumar Bank Logo" className="brand-logo" />
+          <span className="brand-name">Dileepkumar Bank</span>
+        </div>
+        
+        <div className="hero-content">
+          <h1 className="heading-1" style={{ color: 'white' }}>Banking designed for modern life.</h1>
+          <p className="hero-subtitle">Monitor your wealth, move money instantly, and stay in control with an intelligent digital experience.</p>
+          
+          <div className="hero-features">
+            <div className="feature-item">
+              <span className="feature-icon">🛡️</span>
+              <span>Enterprise-Grade Security</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">⚡</span>
+              <span>Real-Time Global Transfers</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">📊</span>
+              <span>Advanced Wealth Analytics</span>
             </div>
           </div>
-          <p className="muted">Trusted by 2.3M+ customers worldwide.</p>
         </div>
+        
+        <div className="hero-footer">
+          <p>Trusted by Fortune 500 companies & premium clients worldwide.</p>
+        </div>
+      </div>
 
-        <div className="login-form-panel">
-          <div className="mode-switcher">
-            <button className={`mode-pill ${mode === 'customer' ? 'active' : ''}`} type="button" onClick={() => setMode('customer')}>Customer sign in</button>
-            <button className={`mode-pill ${mode === 'employee' ? 'active' : ''}`} type="button" onClick={() => setMode('employee')}>Bank employee</button>
+      <div className="login-right-panel">
+        <div className="login-form-container card">
+          <div className="mode-toggle">
+            <button 
+              className={`toggle-btn ${mode === 'customer' ? 'active' : ''}`} 
+              type="button" 
+              onClick={() => setMode('customer')}
+            >
+              Client Portal
+            </button>
+            <button 
+              className={`toggle-btn ${mode === 'employee' ? 'active' : ''}`} 
+              type="button" 
+              onClick={() => setMode('employee')}
+            >
+              Employee Console
+            </button>
           </div>
-          <h2>{mode === 'employee' ? 'Employee sign in' : 'Welcome back'}</h2>
-          <p>{mode === 'employee' ? 'Access customer servicing, approvals and branch operations.' : 'Sign in to continue to your secure dashboard.'}</p>
-          {error ? <div className="error-banner">{error}</div> : null}
+          
+          <h2 className="heading-2">{mode === 'employee' ? 'Employee Sign In' : 'Client Access'}</h2>
+          <p className="text-muted" style={{ marginBottom: '2rem' }}>
+            {mode === 'employee' 
+              ? 'Secure access for branch operations and servicing.' 
+              : 'Sign in to access your secure corporate dashboard.'}
+          </p>
+          
+          {error && <div className="error-alert">{error}</div>}
 
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="username">{mode === 'employee' ? 'Employee ID' : 'Customer ID'}</label>
+          <form onSubmit={handleSubmit} className="auth-form">
+            <div className="input-group">
+              <label htmlFor="username" className="input-label">
+                {mode === 'employee' ? 'Employee ID' : 'Client ID'}
+              </label>
               <input
                 id="username"
+                className="input-field"
                 value={form.username}
                 onChange={(event) => setForm({ ...form, username: event.target.value })}
-                placeholder={mode === 'employee' ? 'Enter employee ID' : 'Enter customer ID'}
+                placeholder={mode === 'employee' ? 'Enter Employee ID' : 'Enter Client ID'}
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
+            
+            <div className="input-group">
+              <label htmlFor="password" className="input-label">Password</label>
               <input
                 id="password"
                 type="password"
+                className="input-field"
                 value={form.password}
                 onChange={(event) => setForm({ ...form, password: event.target.value })}
-                placeholder="Enter password"
+                placeholder="Enter your password"
               />
             </div>
-            <div className="form-actions">
-              <button className="primary-btn" type="submit">Sign in</button>
-              <button className="secondary-btn" type="button">Register</button>
+            
+            <div className="forgot-password">
+              <a href="#">Forgot your password?</a>
             </div>
+            
+            <button className="btn-primary full-width" type="submit">Secure Sign In</button>
           </form>
 
-          <p className="inline-note">Demo credentials: use any non-empty values. Type “employee” or “bank” in the ID field to enter the employee console.</p>
+          <div className="demo-hint">
+            <p><strong>Demo Note:</strong> Use any credentials. Type "employee" to access the employee view.</p>
+          </div>
         </div>
       </div>
     </div>

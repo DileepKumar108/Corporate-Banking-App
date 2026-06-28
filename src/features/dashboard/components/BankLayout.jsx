@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../auth/store/authSlice';
-import logo from '../../../assets/dk-logo.svg';
+import logo from '../../../assets/logo.jpg';
+import './BankLayout.css';
 
 const BankLayout = ({ title, subtitle, children, activePath, role = 'customer' }) => {
   const dispatch = useDispatch();
@@ -10,20 +11,18 @@ const BankLayout = ({ title, subtitle, children, activePath, role = 'customer' }
 
   const navItems = role === 'employee'
     ? [
-        { to: '/employee', label: 'Overview' },
-        { to: '/employee-operations', label: 'Operations' },
-        { to: '/corporate', label: 'Corporate' },
+        { to: '/employee', label: 'Operations Overview' },
+        { to: '/employee-operations', label: 'Customer Servicing' },
+        { to: '/corporate', label: 'Corporate Accounts' },
       ]
     : [
-        { to: '/dashboard', label: 'Overview' },
-        { to: '/accounts', label: 'Accounts' },
-        { to: '/cards', label: 'Cards' },
+        { to: '/dashboard', label: 'Portfolio Overview' },
+        { to: '/accounts', label: 'Accounts & Cards' },
         { to: '/payments', label: 'Payments' },
-        { to: '/transfers', label: 'Transfers' },
-        { to: '/insights', label: 'Insights' },
-        { to: '/statements', label: 'Statements' },
-        { to: '/security', label: 'Security' },
-        { to: '/rewards', label: 'Rewards' },
+        { to: '/transfers', label: 'Global Transfers' },
+        { to: '/insights', label: 'Wealth Insights' },
+        { to: '/statements', label: 'Documents' },
+        { to: '/security', label: 'Security Center' },
       ];
 
   const handleLogout = () => {
@@ -32,53 +31,65 @@ const BankLayout = ({ title, subtitle, children, activePath, role = 'customer' }
   };
 
   return (
-    <div className="app-shell">
-      <div className="bank-shell">
-        <aside className="sidebar">
-          <div>
-            <div className="brand-block">
-              <img src={logo} alt="Dileepkumar Bank logo" className={`brand-logo animate`} />
-              <div>
-                <h3>Dileepkumar Bank</h3>
-                <p className="muted">{role === 'employee' ? 'Bank Operations' : 'Digital Banking'}</p>
-              </div>
-            </div>
-
-            <nav className="sidebar-nav">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.to}
-                  to={item.to}
-                  className={({ isActive }) => `nav-link${isActive || activePath === item.to ? ' active' : ''}`}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </nav>
+    <div className="layout-container">
+      <aside className="sidebar">
+        <div className="sidebar-header">
+          <img src={logo} alt="Dileepkumar Bank" className="sidebar-logo" />
+          <div className="sidebar-brand">
+            <h2>Dileepkumar Bank</h2>
+            <span className="badge">{role === 'employee' ? 'Employee Console' : 'Premium Client'}</span>
           </div>
+        </div>
 
-          <button className="primary-btn full-width" type="button">
-            Need help?
+        <nav className="sidebar-nav">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) => `nav-item ${isActive || activePath === item.to ? 'active' : ''}`}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="sidebar-footer">
+          <div className="user-profile">
+            <div className="avatar">{role === 'employee' ? 'RM' : 'AR'}</div>
+            <div className="user-info">
+              <span className="user-name">{role === 'employee' ? 'Riya Menon' : 'Aarav Rao'}</span>
+              <span className="user-role">{role === 'employee' ? 'Senior Operations' : 'Client ID: 9021-X'}</span>
+            </div>
+          </div>
+          <button className="btn-logout" onClick={handleLogout} title="Logout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
           </button>
-        </aside>
+        </div>
+      </aside>
 
-        <main className="main-content">
-          <header className="topbar">
-            <div>
-              <p className="muted">Premium experience</p>
-              <h1>{title}</h1>
-              <p className="muted">{subtitle}</p>
-            </div>
-            <div className="header-actions">
-              <button className="secondary-btn" type="button">Support</button>
-              <button className="primary-btn" type="button" onClick={handleLogout}>
-                Logout
-              </button>
-            </div>
-          </header>
+      <main className="main-content">
+        <header className="topbar">
+          <div className="page-header">
+            <h1 className="heading-1" style={{ marginBottom: '0.25rem' }}>{title}</h1>
+            <p className="text-muted">{subtitle}</p>
+          </div>
+          
+          <div className="topbar-actions">
+            <button className="icon-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            </button>
+            <button className="btn-accent">Get Support</button>
+          </div>
+        </header>
+        
+        <div className="page-content">
           {children}
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 };

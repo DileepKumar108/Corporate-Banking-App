@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 const IntroVideo = ({ src = '/intro.mp4', autoPlay = true, storageKey = 'introPlayed' }) => {
   const [visible, setVisible] = useState(false);
@@ -56,6 +57,12 @@ const IntroVideo = ({ src = '/intro.mp4', autoPlay = true, storageKey = 'introPl
       onError={() => setVisible(false)}
     />
   );
+};
+
+IntroVideo.propTypes = {
+  src: PropTypes.string,
+  autoPlay: PropTypes.bool,
+  storageKey: PropTypes.string,
 };
 
 export default IntroVideo;

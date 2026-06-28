@@ -4,10 +4,12 @@ import { MemoryRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
 import EmployeeOperations from './EmployeeOperations';
 import authReducer from '../../auth/store/authSlice';
+import dashboardReducer from '../store/dashboardSlice';
 
 const createStore = () => configureStore({
   reducer: {
     auth: authReducer,
+    dashboard: dashboardReducer,
   },
 });
 

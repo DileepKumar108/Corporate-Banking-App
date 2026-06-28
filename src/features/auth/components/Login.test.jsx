@@ -21,11 +21,11 @@ describe('Login', () => {
       </Provider>
     );
 
-    expect(screen.getByText(/welcome back/i)).toBeInTheDocument();
+    expect(screen.getByText(/client access/i)).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('button', { name: /bank employee/i }));
+    fireEvent.click(screen.getByRole('button', { name: /employee console/i }));
 
     expect(screen.getByText(/employee sign in/i)).toBeInTheDocument();
-    expect(screen.getByText(/access customer servicing, approvals and branch operations/i)).toBeInTheDocument();
+    expect(screen.getByText(/secure access for branch operations and servicing/i)).toBeInTheDocument();
   });
 });
