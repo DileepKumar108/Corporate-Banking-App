@@ -49,9 +49,40 @@ When you know how to build an app, the next step is making it unbreakable.
     *   CI/CD: GitHub Actions (Automatically testing and deploying your code every time you push).
 
 ---
+
+## 📚 Recommended Learning Sources (Where to actually learn this)
+
+Just like the famous .NET roadmaps, knowing *what* to learn is only half the battle. Here are the best free and paid resources to master the Full-Stack ecosystem, with a heavy emphasis on Backend Engineering:
+
+### 🟢 Backend (Node.js & Express) Resources
+*   **YouTube Channels:**
+    *   [Hussein Nasser](https://www.youtube.com/c/HusseinNasser-software-engineering) - The absolute best channel for deep-dive Backend Engineering, database architecture, and networking.
+    *   [Traversy Media](https://www.youtube.com/c/TraversyMedia) - Incredible crash courses on Node.js and Express.
+    *   [The Net Ninja](https://www.youtube.com/c/TheNetNinja) - The best step-by-step playlists for Node/Express beginners.
+*   **Books:**
+    *   *Node.js Design Patterns* by Mario Casciaro - The holy grail for writing enterprise-level Node.js code.
+*   **Documentation:**
+    *   [Express.js Official Guide](https://expressjs.com/)
+
+### 🗄️ Database & Architecture Resources
+*   **SQL Mastery:** [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) (Free, step-by-step SQL guide).
+*   **System Design:** [ByteByteGo (Alex Xu)](https://www.youtube.com/c/ByteByteGo) - Learn how massive systems like YouTube and Uber are built on the backend.
+*   **ORMs:** [Prisma Documentation](https://www.prisma.io/docs) - The best database tool for modern Node.js developers.
+
+### ⚛️ Frontend (React) Resources
+*   **Official Docs:** [React.dev](https://react.dev/) - They recently rewrote their entire documentation. It is now the best place to learn React.
+*   **YouTube Channels:**
+    *   [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified) - Incredible at explaining complex React Hooks (like `useEffect` and `useMemo`) in 5 minutes.
+    *   [Jack Herrington](https://www.youtube.com/c/JackHerrington) - For advanced, senior-level Frontend architecture.
+
+### 🌐 General Full-Stack & Free Bootcamps
+*   [FreeCodeCamp.org](https://www.freecodecamp.org/) - A completely free, interactive 3000-hour curriculum covering everything from HTML to advanced Node.js Microservices.
+*   [Full Stack Open](https://fullstackopen.com/en/) - A legendary, free, university-level course by the University of Helsinki covering React, Redux, Node.js, MongoDB, GraphQL, and TypeScript.
+
+---
 ## The Ultimate Challenge 🚀
 
-You now have the roadmap. Your challenge? 
+You now have the roadmap and the exact sources to learn from. Your challenge? 
 Take the Dileepkumar Bank code you just learned, and completely rewrite it using **TypeScript**, connect it to a real **PostgreSQL database** using Prisma, and deploy it to the internet! 
 
 Good luck on your journey.
