@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="Dileepkumar Bank logo">
+  <title>Dileepkumar Bank</title>
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b63b8" />
+      <stop offset="60%" stop-color="#1191e0" />
+      <stop offset="100%" stop-color="#2fc1ff" />
+    </linearGradient>
+    <filter id="drop" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#031824" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="520" height="140" fill="none" />
+
+  <!-- Shield mark -->
+  <g transform="translate(16,8)" filter="url(#drop)">
+    <path d="M74 6 L140 28 L162 90 L120 132 L28 132 L2 70 Z" fill="url(#g1)" stroke="#063b62" stroke-width="3" />
+    <circle cx="74" cy="60" r="28" fill="rgba(255,255,255,0.06)" />
+    <text x="60" y="84" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="46" fill="#fff">DK</text>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(190,36)">
+    <text x="0" y="32" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="36" fill="#0b63b8">Dileepkumar</text>
+    <text x="0" y="62" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="13" fill="#5a7f9f" letter-spacing="6">BANK</text>
+  </g>
+
+</svg>
