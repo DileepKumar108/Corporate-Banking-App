@@ -48,6 +48,7 @@ Instead of guessing how the code works, please dive into our comprehensive 7-par
 5.  **[04: Backend Node Vault](./docs/04-Backend-Node-Vault.md)**
 6.  **[05: Banking Algorithms (DTI & Fraud)](./docs/05-Banking-Algorithms.md)**
 7.  **[06: Security & Scaling (Solving Enterprise Bugs)](./docs/06-Security-and-Scaling.md)**
+8.  **[07: Full-Stack Developer Roadmap](./docs/07-FullStack-Developer-Roadmap.md)**
 
 Whether you are learning React state, Express APIs, or advanced security remediation (like fixing Path Traversal hacks), this course explains every single line of code in plain English.
 
