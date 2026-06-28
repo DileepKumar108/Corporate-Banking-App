@@ -72,6 +72,16 @@ Just like the famous .NET roadmaps, knowing *what* to learn is only half the bat
 *   **Documentation:**
     *   [Express.js Official Guide](https://expressjs.com/)
 
+### ☕ Java / Spring Boot (Enterprise Backend Alternative)
+If you want to build backends for massive global banks, Java is the industry standard.
+*   **YouTube Channels:**
+    *   [Amigoscode](https://www.youtube.com/c/amigoscode) - The absolute best crash courses on Java, Spring Boot, and Microservices.
+    *   [Dan Vega](https://www.youtube.com/c/DanVega) - Excellent tutorials on modern Spring Boot features.
+*   **Websites & Blogs:**
+    *   [Baeldung](https://www.baeldung.com/) - The undisputed holy grail for Java developers. If you have a question about Java or Spring, Baeldung has the answer.
+*   **Documentation:**
+    *   [Spring Boot Official Guides](https://spring.io/guides)
+
 ### 🗄️ Database & Architecture Resources
 *   **SQL Mastery:** [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) (Free, step-by-step SQL guide).
 *   **System Design:** [ByteByteGo (Alex Xu)](https://www.youtube.com/c/ByteByteGo) - Learn how massive systems like YouTube and Uber are built on the backend.
