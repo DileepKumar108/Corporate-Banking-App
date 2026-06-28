@@ -31,36 +31,39 @@ graph TD
 
     %% Make them all clickable!
     class Syntax clickable
-    click Syntax "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/01-Basic-Syntax.md" "Learn Basic Syntax"
-
+    
     class Life clickable
-    click Life "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/02-Lifecycle.md" "Learn Lifecycle"
-
+    
     class Types clickable
-    click Types "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/03-Data-Types.md" "Learn Data Types"
-
+    
     class Vars clickable
-    click Vars "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/04-Variables-and-Scopes.md" "Learn Variables"
-
+    
     class Cast clickable
-    click Cast "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/05-Type-Casting.md" "Learn Type Casting"
-
+    
     class Str clickable
-    click Str "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/06-Strings-and-Methods.md" "Learn Strings"
-
+    
     class Math clickable
-    click Math "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/07-Math-Operations.md" "Learn Math"
-
+    
     class Arr clickable
-    click Arr "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/08-Arrays.md" "Learn Arrays"
-
+    
     class Cond clickable
-    click Cond "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/09-Conditionals.md" "Learn Conditionals"
-
+    
     class Loop clickable
-    click Loop "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/10-Loops.md" "Learn Loops"
-
+    
     class OOP clickable
-    click OOP "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/java-roadmap/01-Learn-The-Basics/11-Basics-of-OOP.md" "Learn OOP"
-```
+    ```
 *Want a static image instead? Download the official roadmap [PNG version](./java-roadmap.png) or [PDF version](./java-roadmap.pdf).*
+
+
+## 📚 Java Tutorials (Click to Read!)
+* [1. Basic Syntax](./java-roadmap/01-Learn-The-Basics/01-Basic-Syntax.md)
+* [2. Lifecycle of a Program](./java-roadmap/01-Learn-The-Basics/02-Lifecycle.md)
+* [3. Data Types](./java-roadmap/01-Learn-The-Basics/03-Data-Types.md)
+* [4. Variables and Scopes](./java-roadmap/01-Learn-The-Basics/04-Variables-and-Scopes.md)
+* [5. Type Casting](./java-roadmap/01-Learn-The-Basics/05-Type-Casting.md)
+* [6. Strings and Methods](./java-roadmap/01-Learn-The-Basics/06-Strings-and-Methods.md)
+* [7. Math Operations](./java-roadmap/01-Learn-The-Basics/07-Math-Operations.md)
+* [8. Arrays](./java-roadmap/01-Learn-The-Basics/08-Arrays.md)
+* [9. Conditionals](./java-roadmap/01-Learn-The-Basics/09-Conditionals.md)
+* [10. Loops](./java-roadmap/01-Learn-The-Basics/10-Loops.md)
+* [11. Basics of OOP](./java-roadmap/01-Learn-The-Basics/11-Basics-of-OOP.md)

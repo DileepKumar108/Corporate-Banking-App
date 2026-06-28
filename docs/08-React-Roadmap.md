@@ -10,19 +10,22 @@ graph TD
 
     Start[The React Journey] --> JSX[1. JSX and Rendering]
     class JSX clickable
-    click JSX "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/01-JSX-and-Rendering.md" "Learn about JSX"
-
+    
     JSX --> Comps[2. Components and Props]
     class Comps clickable
-    click Comps "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/02-Components-and-Props.md" "Learn about Components"
-
+    
     Comps --> State[3. State and useState]
     class State clickable
-    click State "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/03-State-and-useState.md" "Learn about State"
-
+    
     State --> Hooks[4. Lifecycle and useEffect]
     class Hooks clickable
-    click Hooks "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/04-Lifecycle-and-useEffect.md" "Learn about useEffect"
-```
+    ```
 
 Once you master these 4 pillars, you can build any modern web application!
+
+
+## 📚 React Tutorials (Click to Read!)
+* [1. JSX and Rendering](./react-roadmap/01-JSX-and-Rendering.md)
+* [2. Components and Props](./react-roadmap/02-Components-and-Props.md)
+* [3. State and useState](./react-roadmap/03-State-and-useState.md)
+* [4. Lifecycle and useEffect](./react-roadmap/04-Lifecycle-and-useEffect.md)

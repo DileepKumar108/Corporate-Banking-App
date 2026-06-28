@@ -10,19 +10,22 @@ graph TD
 
     Start[The Node.js Journey] --> Event[1. The Event Loop]
     class Event clickable
-    click Event "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/01-The-Event-Loop.md" "Learn about Asynchronous JavaScript"
-
+    
     Event --> Express[2. Express Routing]
     class Express clickable
-    click Express "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/02-Express-Routing.md" "Learn about APIs and Routing"
-
+    
     Express --> Middle[3. Middleware]
     class Middle clickable
-    click Middle "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/03-Middleware.md" "Learn about Middleware and Security"
-
+    
     Middle --> DB[4. File System & Databases]
     class DB clickable
-    click DB "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/04-File-System-and-Databases.md" "Learn about persistent storage"
-```
+    ```
 
 Mastering these 4 pillars allows you to build secure enterprise backends capable of handling thousands of requests per second!
+
+
+## 📚 Node.js Tutorials (Click to Read!)
+* [1. The Event Loop](./node-roadmap/01-The-Event-Loop.md)
+* [2. Express Routing](./node-roadmap/02-Express-Routing.md)
+* [3. Middleware](./node-roadmap/03-Middleware.md)
+* [4. File System & Databases](./node-roadmap/04-File-System-and-Databases.md)
