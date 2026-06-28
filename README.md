@@ -35,31 +35,21 @@ This repository is structured to hold both the frontend and backend in a unified
     *   **Rate Limiting & Anti-DDoS:** Global middleware to prevent API abuse.
     *   **Strict Security Middleware:** Hardened CORS policies, Helmet for HTTP headers, and robust Path Traversal prevention.
 
-## 🚀 How to Run Locally
+## 🎓 The Dileepkumar Masterclass Course
 
-Because this is a full-stack monorepo, you will need to start both the backend server and the frontend client.
+This repository is designed to be the **ultimate learning resource** for full-stack developers. We have documented every single aspect of this application step-by-step. 
 
-### 1. Start the Backend
-The backend runs the API, the underwriting engines, and the secure mock database.
-```bash
-cd backend
-npm install
-node server.js
-```
-*The backend will spin up securely on `http://localhost:3000`.*
+Instead of guessing how the code works, please dive into our comprehensive 7-part Masterclass Course located in the `docs/` folder:
 
-### 2. Start the Frontend
-In a new terminal window, start the React application.
-```bash
-npm install
-npm run dev
-```
-*The frontend will spin up on `http://localhost:5173`.*
+1.  **[00: Setup and Installation](./docs/00-Setup-and-Installation.md)**
+2.  **[01: Introduction & The Real-World Story](./docs/01-Introduction-The-Bank.md)**
+3.  **[02: System Architecture & Mermaid Diagrams](./docs/02-System-Architecture.md)**
+4.  **[03: Frontend React Mastery](./docs/03-Frontend-React-Mastery.md)**
+5.  **[04: Backend Node Vault](./docs/04-Backend-Node-Vault.md)**
+6.  **[05: Banking Algorithms (DTI & Fraud)](./docs/05-Banking-Algorithms.md)**
+7.  **[06: Security & Scaling (Solving Enterprise Bugs)](./docs/06-Security-and-Scaling.md)**
 
-### 3. Log In
-Open your browser to `http://localhost:5173`. You can log in using our default seeded accounts:
-*   **Customer Portal:** Username: `client` | Password: `client`
-*   **Employee Portal:** Username: `employee` | Password: `employee`
+Whether you are learning React state, Express APIs, or advanced security remediation (like fixing Path Traversal hacks), this course explains every single line of code in plain English.
 
 ---
 
