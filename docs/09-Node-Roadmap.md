@@ -8,24 +8,15 @@ Welcome to the **Backend Engineering** bootcamp path. This roadmap will teach yo
 graph TD
     classDef clickable fill:#8cc84b,stroke:#333,stroke-width:2px,color:#000,cursor:pointer;
 
-    Start[The Node.js Journey] --> Event[1. The Event Loop]
-    class Event clickable
-    
-    Event --> Express[2. Express Routing]
-    class Express clickable
-    
-    Express --> Middle[3. Middleware]
-    class Middle clickable
-    
-    Middle --> DB[4. File System & Databases]
-    class DB clickable
-    ```
+    Start((Start)) --> Box1[1. The Event Loop]
+    Box1 --> Box2[2. Express Routing]
+    Box2 --> Box3[3. Middleware]
+    Box3 --> Box4[4. File System & Databases]
 
-Mastering these 4 pillars allows you to build secure enterprise backends capable of handling thousands of requests per second!
+    class Box1,Box2,Box3,Box4 clickable
 
-
-## 📚 Node.js Tutorials (Click to Read!)
-* [1. The Event Loop](./node-roadmap/01-The-Event-Loop.md)
-* [2. Express Routing](./node-roadmap/02-Express-Routing.md)
-* [3. Middleware](./node-roadmap/03-Middleware.md)
-* [4. File System & Databases](./node-roadmap/04-File-System-and-Databases.md)
+    click Box1 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/01-The-Event-Loop.md" "Learn about Event Loop" _blank
+    click Box2 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/02-Express-Routing.md" "Learn about Routing" _blank
+    click Box3 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/03-Middleware.md" "Learn about Middleware" _blank
+    click Box4 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/node-roadmap/04-File-System-and-Databases.md" "Learn about Databases" _blank
+```

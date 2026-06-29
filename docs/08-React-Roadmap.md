@@ -8,24 +8,15 @@ Welcome to the **Frontend Engineering** bootcamp path. This roadmap will teach y
 graph TD
     classDef clickable fill:#61dafb,stroke:#333,stroke-width:2px,color:#000,cursor:pointer;
 
-    Start[The React Journey] --> JSX[1. JSX and Rendering]
-    class JSX clickable
-    
-    JSX --> Comps[2. Components and Props]
-    class Comps clickable
-    
-    Comps --> State[3. State and useState]
-    class State clickable
-    
-    State --> Hooks[4. Lifecycle and useEffect]
-    class Hooks clickable
-    ```
+    Start((Start)) --> Box1[1. JSX and Rendering]
+    Box1 --> Box2[2. Components and Props]
+    Box2 --> Box3[3. State and useState]
+    Box3 --> Box4[4. Lifecycle and useEffect]
 
-Once you master these 4 pillars, you can build any modern web application!
+    class Box1,Box2,Box3,Box4 clickable
 
-
-## 📚 React Tutorials (Click to Read!)
-* [1. JSX and Rendering](./react-roadmap/01-JSX-and-Rendering.md)
-* [2. Components and Props](./react-roadmap/02-Components-and-Props.md)
-* [3. State and useState](./react-roadmap/03-State-and-useState.md)
-* [4. Lifecycle and useEffect](./react-roadmap/04-Lifecycle-and-useEffect.md)
+    click Box1 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/01-JSX-and-Rendering.md" "Learn about JSX" _blank
+    click Box2 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/02-Components-and-Props.md" "Learn about Components" _blank
+    click Box3 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/03-State-and-useState.md" "Learn about State" _blank
+    click Box4 "https://github.com/DileepKumar108/Corporate-Banking-App/blob/master/docs/react-roadmap/04-Lifecycle-and-useEffect.md" "Learn about useEffect" _blank
+```
