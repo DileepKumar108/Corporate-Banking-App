@@ -51,7 +51,7 @@ graph TD
     class Loop clickable
     
     class OOP clickable
-    ```
+```
 *Want a static image instead? Download the official roadmap [PNG version](./java-roadmap.png) or [PDF version](./java-roadmap.pdf).*
 
 
